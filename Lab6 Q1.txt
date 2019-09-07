@@ -1,0 +1,168 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+namespace Program
+{
+    class InvalidChildClassException : Exception
+    {
+        public InvalidChildClassException(string message) : base(message) {
+         }
+    }
+    class Customer
+    {
+        //fields
+        private string _CustomerName;
+        private string _CustomerID;
+        private string _Address;
+        private string _city;
+        private string _phone;
+        private int _creditlimit;
+        //properties
+        public string CustomerName
+        {
+            set
+            {
+                _CustomerName = value;
+            }
+            get
+            {
+                return _CustomerName;
+            }
+        }
+        public string CustomerID
+        {
+            set
+            {
+                _CustomerID = value;
+            }
+            get
+            {
+                return _CustomerID;
+            }
+        }
+        public string Address
+        {
+            set
+            {
+                _Address = value;
+            }
+            get
+            {
+                return _Address;
+
+            }
+        }
+            
+            public string City
+        {
+            set
+            {
+                _city = value;
+            }
+            get
+            {
+                return _city;
+
+            }
+        }
+        public string Phone
+        {
+            set
+            {
+                _phone = value;
+            }
+            get
+            {
+                return _phone;
+
+            }
+        }
+        public int CreditLimit
+        {
+            set
+            {
+                if (value <= 50000)
+                { _creditlimit = value; }
+                else
+                    throw new Exception("credit limit exceeded");
+            }
+            get
+            {
+                return _creditlimit;
+
+            }
+        }
+        public Customer()
+        {
+            _CustomerName = null;
+            _CustomerID = null;
+            _Address = null;
+            _city = null;
+            _phone = null;
+            CreditLimit = 0;
+        }
+        public Customer (string customerName,string customerID,string address,string city,string phone ,int creditLimit)
+        {
+            _CustomerName = customerName;
+            _CustomerID = customerID;
+           
+            _Address = address;
+            _city = city;
+            _creditlimit = creditLimit;
+
+        }
+        static void Main()
+        {
+            try
+            {
+                Customer customer = new Customer();
+                Console.WriteLine("Customer Name");
+                customer.CustomerName = Console.ReadLine();
+
+                Console.WriteLine("Customer ID");
+                customer.CustomerID= Console.ReadLine();
+                Console.WriteLine("Customer CREDIT LIMIT");
+                customer.CreditLimit = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("\nCustomer Details");
+                Console.WriteLine("\nCUSTOMER NAME" + customer.CustomerName);
+                Console.WriteLine("\nCustomer mobile" + customer.CustomerID);
+                Console.WriteLine("\nCustomer age" + customer.CreditLimit);
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                FileInfo fi = new FileInfo(@"c:\Capg\LogXYZ.txt");
+                if (fi.Exists == false)
+                {
+                    fi.Create();
+                }
+                //FileStream fs = new FileStream(@"C:\Capg\Log.txt",FileMode.Append,FileAccess.Write);
+                string content = $"{DateTime.Now}\nMessage:{ex.Message}";
+                //$"\nStack Trace:{ex.StackTrace}" +
+                //$"\nInnerException:{ex.InnerException?.Message}" +
+                //$"\nType:{ex.GetType().ToString()}";
+                //Console.WriteLine("UNEXPECTED ERROR");
+                //StreamWriter sw = new StreamWriter(@"C:\Capg\Log.txt", true);
+                //sw.Write(content);
+                //sw.Close();
+                Console.WriteLine(content);
+                //StreamReader sr = new StreamReader(@"C:\Capg\Log.txt");
+                //Console.WriteLine(sr.ReadToEnd());
+                //sr.Close();
+
+
+            }
+
+            finally
+            {
+                Console.WriteLine("Thanks");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
