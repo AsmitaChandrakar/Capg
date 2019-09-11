@@ -1,0 +1,10 @@
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\obj\Debug\Lab1Q1.csproj.CoreCompileInputs.cache
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\bin\Debug\Lab1Q1.exe.config
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\bin\Debug\Lab1Q1.exe
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\bin\Debug\Lab1Q1.pdb
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\bin\Debug\ClassLibrary1.dll
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\bin\Debug\ClassLibrary1.pdb
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\obj\Debug\Lab1Q1.csprojAssemblyReference.cache
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\obj\Debug\Lab1Q1.csproj.CopyComplete
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\obj\Debug\Lab1Q1.exe
+C:\Users\asmchand\source\repos\Lab1Q1\Lab1Q1\obj\Debug\Lab1Q1.pdb
